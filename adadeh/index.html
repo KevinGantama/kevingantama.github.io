@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Sebuah permintaan spesial... hanya untukmu." />
+  <title>My Girl, Nanaa 💖</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (tanpa spasi!) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <!-- CSS Kita -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Layar Awal -->
+    <div id="screen-welcome" class="screen active">
+      <div class="heart-container">
+        <div class="heart"></div>
+      </div>
+      <h1 class="title">Hi, My Woman...</h1>
+
+      <!-- Input Nama -->
+      <div class="name-input">
+        <label for="partnerName"> Enter Ur Name, Please Yaahh? 😊</label>
+        <input type="text" id="partnerName" placeholder="Masukkan namamu...">
+      </div>
+
+      <p class="subtitle">Ada yang mau disampaikan, heheheh letsgoo </p>
+      <button id="startBtn" class="btn">Next ❤️</button>
+    </div>
+
+    <!-- Pertanyaan 1 -->
+    <div id="screen-q1" class="screen hidden">
+      <h2 class="question">Pertanyaan #1</h2>
+      <p class="q-text">tauu ga kapan si pertama kali, i fall in love with u?</p>
+      <div class="options">
+        <button class="option-btn" data-next="q2">first meet up</button>
+        <button class="option-btn" data-next="q2">when u gimme lil attention</button>
+        <button class="option-btn" data-next="q2">everyday, getting deeper</button>
+      </div>
+    </div>
+    
+
+    <!-- Pertanyaan 2 -->
+    <div id="screen-q2" class="screen hidden">
+      <h2 class="question">Pertanyaan #2</h2>
+      <p class="q-text">guess,what my favorite moment when im with u?</p>
+      <div class="options">
+        <button class="option-btn" data-next="q3">the first time we called until late night</button>
+        <button class="option-btn" data-next="q3">when u cook for me</button>
+        <button class="option-btn" data-next="q3">the first time we  hiked together</button>
+      </div>
+    </div>
+
+    <!-- Pertanyaan 3 -->
+    <div id="screen-q3" class="screen hidden">
+      <h2 class="question">Pertanyaan #3</h2>
+      <p class="q-text typewriter">what's my fav thing about u?</p>
+      <div class="options">
+        <button class="option-btn" data-next="q4">ur sincere smile</button>
+        <button class="option-btn" data-next="q4">the way u care for another person</button>
+        <button class="option-btn" data-next="q4">how you behave when something is urgent</button>
+      </div>
+    </div>
+
+    <!-- Pertanyaan 4 -->
+    <div id="screen-q4" class="screen hidden">
+      <h2 class="question">Pertanyaan #4</h2>
+      <p class="q-text typewriter">my final place for the rest of my life?</p>
+      <div class="options">
+        <button class="option-btn" data-next="q5">a home in switzerland</button>
+        <button class="option-btn" data-next="q5">wherever it is,but with u</button>
+        <button class="option-btn" data-next="q5">ur hug, every night</button>
+      </div>
+    </div>
+
+    <!-- Pertanyaan 5 -->
+    <div id="screen-q5" class="screen hidden">
+      <h2 class="question">Pertanyaan #5</h2>
+      <p class="q-text typewriter">my goals for now?</p>
+      <div class="options">
+        <button class="option-btn" data-next="proposal">get my degree</button>
+        <button class="option-btn" data-next="proposal">Yook seongji's body</button>
+        <button class="option-btn" data-next="proposal">ask u to be my girlfriend today</button>
+      </div>
+    </div>
+  <!-- Momen Setelah Q1 -->
+  <div id="moment-1" class="screen hidden">
+    <h2 class="question">our first moment 💖</h2>
+    <div class="moment-image">
+      <img src="assets/moment1.jpg" alt="Kita Pertama Kali Ketemu">
+    </div>
+    <p class="q-text"> The first time we've been on a full day date....and I knew right away you were special.  .</p>
+    <button class="btn moment-next" data-next="q2">Next...</button>
+  </div>
+
+<!-- Momen Setelah Q1 -->
+  <div id="moment-2" class="screen hidden">
+    <h2 class="question">unforgettable night🌙💖</h2>
+    <div class="moment-video">
+      <video autoplay muted loop playsinline>
+        <source src="assets/moment2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="q-text">that night, we talked a lot...</p>
+    <button class="btn moment-next" data-next="q3">Lanjutkan...</button>
+  </div>
+  <!-- Momen Setelah Q3 -->
+  <div id="moment-3" class="screen hidden">
+    <h2 class="question">your sincere smile 😊</h2>
+    <div class="moment-image">
+      <img src="assets/moment3.jpg" alt="Saat Kamu Tertawa">
+    </div>
+    <p class="q-text">every time you laugh, it warms my heart.</p>
+    <button class="btn moment-next" data-next="q4">Next...</button>
+  </div>
+
+  <!-- Momen Setelah Q4 -->
+  <div id="moment-4" class="screen hidden">
+    <h2 class="question">wherever it is, but with u, my home 🏡</h2>
+    <div class="moment-image">
+      <img src="assets/moment4.jpg" alt="Bersama di Pantai">
+    </div>
+    <p class="q-text">Even the most ordinary places feel special when you're there .</p>
+    <button class="btn moment-next" data-next="q5">Next...</button>
+  </div>
+
+  
+  <!-- Momen Setelah Q1 -->
+  <div id="moment-5" class="screen hidden">
+    <h2 class="question">my goals for now.. u 💖</h2>
+    <div class="moment-video">
+      <video autoplay muted loop playsinline>
+        <source src="assets/moment5.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="q-text">today, i want to start all now.</p>
+    <button class="btn moment-next" data-next="proposal">Next to the most special part...</button>
+  </div>
+    <!-- Layar Proposal -->
+    <div id="screen-proposal" class="screen hidden">
+      <h2 class="question">Last Question...</h2>
+      <p class="q-text">Do you wanna be mine?</p>
+      <div class="proposal-btns">
+        <button id="yesBtn" class="btn btn-yes">Ya! ❤️</button>
+      </div>
+      <p class="proposal-note"> I love you three thousand, to the bone, to the moon and never back</p>
+    </div>
+
+    <!-- Halaman Thank You -->
+    <div id="screen-thankyou" class="screen hidden">
+      <h2 class="question">Thanks a lot, my love... ❤️</h2>
+
+      <div class="heartbeat-center">
+        <div class="heartbeat"></div>
+      </div>
+
+      <p id="thankYouText" class="q-text"></p>
+      <p id="proposalDate" class="proposal-date"></p>
+
+      <p class="proposal-note">
+        I promise to love you, protect you, and make you happy
+        until the end of time
+      </p>
+
+      <button id="whatsappBtn" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> Bagikan ke WhatsApp
+      </button>
+
+      <button id="screenshotBtn" class="btn btn-screenshot">Simpan Momen Ini</button>
+    </div>
+
+    <!-- Halaman Penutup -->
+    <div id="screen-ending" class="screen hidden">
+      <h2 class="question">forever together 💍</h2>
+      <p class="q-text">"Love is not looking at each other, but looking together in the same direction.." — Antoine de Saint-Exupéry</p>
+
+      <div class="heartbeat-center">
+        <div class="heartbeat"></div>
+      </div>
+
+      <p class="proposal-note">
+        from now.<br>
+        i'm yours, and you're mine.
+      </p>
+    </div>
+
+  </div> <!-- penutup .container -->
+
+  <!-- Script Utama -->
+  <script src="js/main.js"></script>
+
+  <!-- Audio Player -->
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+    Browsermu tidak mendukung audio.
+  </audio>
+
+  <!-- Tombol Musik -->
+  <div id="musicControl" class="music-btn">
+    <i class="fas fa-volume-up"></i>
+  </div>
+</body>
+</html>
