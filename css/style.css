@@ -450,15 +450,18 @@ body {
 
 .video-wrapper video {
   width: 100%;
-  max-width: 600px;       /* Batas lebar maksimal */
-  height: auto;
+  max-width: 500px;       /* Batas lebar maksimal */
+  height: 400px;
+  object-fit: contain;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   border: 3px solid rgba(255, 255, 255, 0.5);
 }
 @media (max-width: 768px) {
   .video-wrapper video {
-    max-width: 95%;       /* Lebih lebar di HP, tapi tetap ada margin */
+    max-width: 95%; 
+    max-height: 300px;/* Lebih lebar di HP, tapi tetap ada margin */
     border-radius: 12px;
   }
 }
+
